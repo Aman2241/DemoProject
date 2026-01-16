@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-surface/50 backdrop-blur-lg border border-border/50 shadow-xl;
+  }
+
+  .glass-button {
+    @apply bg-white/5 hover:bg-white/10 active:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 dark:active:bg-white/20 transition-all duration-200 backdrop-blur-md border border-border/50;
+  }
+}
+
+/* Light Theme (Default) */
+:root {
+  color-scheme: light;
+  /* Slate 100 background, White surface */
+  --background: 241 245 249;
+  --surface: 255 255 255;
+  --surface-hover: 248 250 252;
+  --text-main: 15 23 42;
+  /* Slate 900 */
+  --text-muted: 100 116 139;
+  /* Slate 500 */
+  --border: 226 232 240;
+  /* Slate 200 */
+}
+
+/* Dark Theme */
+.dark {
+  color-scheme: dark;
+  /* Slate 900 background, Slate 800 surface */
+  --background: 15 23 42;
+  --surface: 30 41 59;
+  --surface-hover: 51 65 85;
+  --text-main: 255 255 255;
+  --text-muted: 148 163 184;
+  /* Slate 400 */
+  --border: 255 255 255;
+  /* White with opacity used in components usually */
+}
