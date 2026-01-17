@@ -2,13 +2,16 @@
   "name": "raj-finance",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://Aman2241.github.io/DemoProject",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "clsx": "^2.1.0",
@@ -30,6 +33,7 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^6.3.0",
     "jsdom": "^27.4.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
